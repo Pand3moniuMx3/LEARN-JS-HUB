@@ -1,0 +1,98 @@
+:root {
+    --bar-height: 1px;
+}
+
+.hamburger {
+    position: fixed;
+    z-index: 3;
+    width: 30px;
+    height: 30px;
+    top: var(--global-gap);
+    right: var(--global-gap);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    cursor: pointer;
+    transition: var(--transition);
+}
+.hamburger .bar {
+    width: 100%;
+    height: var(--bar-height);
+    background: var(--clr-white);
+    mix-blend-mode: difference;
+    opacity: 1;
+    transition: var(--transition);
+}
+
+.hamburger.active {
+    transform: rotate(180deg);
+} .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+} .hamburger.active .bar:nth-child(1) {
+    transform: translateY(10px) rotate(45deg);
+    width: 35px;
+} .hamburger.active .bar:nth-child(3) {
+    transform: translateY(-10px) rotate(-45deg);
+    width: 35px;
+}
+
+/*------------------------------ NAV TAB ------------------------------*/
+
+.nav-tab {
+    position: fixed;
+    top: 0;
+    right: -500px;
+    width: min(500px, 100vw);
+    height: 100vh;
+    z-index: 2;
+    background: rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(30px);
+    transition: var(--transition);
+    border-left: 1px solid var(--clr-dark-grey);
+    display: flex;
+    flex-direction: column;
+    padding: 100px 25px;
+    gap: 0.5rem;
+}
+.nav-tab.open {
+    right: 0;
+}
+
+.page-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding-bottom: var(--global-gap);
+    border-bottom: 1px solid var(--clr-dark-grey);;
+} .page-nav a {
+    position: relative;
+    width: 100%;
+} .page-nav a::before {
+    content: '';
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    background-image: url("/public/assets/svgs/ArrowDown.png");
+    transform: rotate(45deg);
+    top: 0;
+    right: 0%;
+}
+
+.nav-item {
+    width: 100%;
+    position: relative;
+}
+.nav-item::before {
+    content: '';
+    position: absolute;
+    width: 0px;
+    height: 1px;
+    bottom: 0;
+    right: 0;
+    background-color: var(--clr-dark-grey);
+    transition: var(--transition);
+    overflow: hidden;
+}
+.nav-item:hover:before {
+    width: 100%;
+}

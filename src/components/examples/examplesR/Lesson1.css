@@ -1,0 +1,22 @@
+.class-1 {
+    width: 100px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: transparent;
+    border: 1px solid var(--clr-white);
+    border-radius: 20px;
+    color: var(--clr-white);
+}
+.class-2 {
+    width: 100px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--clr-white);
+    border: 1px solid var(--clr-white);
+    border-radius: 20px;
+    color: var(--clr-black);
+}

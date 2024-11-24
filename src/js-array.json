@@ -1,0 +1,130 @@
+[
+  {
+    "id": "1",
+    "title": "Destructuring",
+    "definition": "We use destructuring when we want to get specific data out of an object or an array.",
+    "exampleExplanation": "In this example, we destructure an array to display specific data about the 2nd object. First, we create an array and call it [books]. Next, we write a function [getBook] to retrieve this data, and put it in a variable [book]. Lastly, we destructure the book variable into four different variables and showcase them in <p> tags.",
+    "exampleCode": "/assets/images/destructurizing-code.png",
+    "docs": "https://www.w3schools.com/js/js_destructuring.asp"
+  },
+  {
+    "id": "2",
+    "title": "Rest Operator",
+    "definition": "The 'rest' operator comes in handy when you want to take the rest of the information from an object after already destructuring it. It can only be used at the end of an array, like in the example code.",
+    "exampleExplanation": "In this example, we use the Rest operator to display the rest of the object data inside a separate array",
+    "exampleCode": "/assets/images/restoperator-code.png",
+    "docs": "https://www.freecodecamp.org/news/javascript-spread-and-rest-operators/"
+  },
+  {
+    "id": "3",
+    "title": "Spread Operator",
+    "definition": "The 'Spread' operator is one of the most commonly used in JavaScript. We can use it to add a new value to an array, add a new item to an object, or override an existing value in an object.",
+    "exampleExplanation": "In this example, we add a new item (epic fantasy) to an existing array(genres) using the Spread operator. Then, we add a new item [movieAdaptation] to the object. Lastly, we override an existing value [pages] for an object. The syntax is '...object/array', and we put it in the front of the array.",
+    "exampleCode": "/assets/images/spreadoperator-code.png",
+    "docs": "https://www.freecodecamp.org/news/javascript-spread-and-rest-operators/"
+  },
+  {
+    "id": "4",
+    "title": "Fetch",
+    "definition": "The fetch() method in JavaScript is used to get data from a server. It sends a request to a specific URL (like a website or API) and brings back the data from that URL, often in the form of text or JSON (a format for storing data). It often comes in handy when we need to read data from an array that's not inside our file.",
+    "exampleExplanation": "In this example, we're fetching data from a public api called adviceslips, and use useStates to show the collected data as a h1. Then, we use useState again to count the clicks. Each time, we update the second variable of the useState function (ex. advice, count)",
+    "exampleCode": "/assets/images/fetch-code.png",
+    "docs": "https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API"
+  },
+  {
+    "id": "5",
+    "title": "Template Literal",
+    "definition": "Template literals are an ES6 JavaScript feature that allows us to easily create strings which can contain any JS expression. To tell the computer that we're using a template literal use backticks, like in the example.",
+    "exampleExplanation": "In this example, we create a summary of the book. The template literal allows us to pass JS expressions inside some text. We also add a simple function to change the summary based on the selected book using useState.",
+    "exampleCode": "/assets/images/templateliterals-code.png",
+    "docs": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals"
+  },
+  {
+    "id": "6",
+    "title": "Ternary Operator",
+    "definition": "Ternaries help us define values based on conditions when using an if/else statement is impossible. The ternary operator has three parts needed for it to work: a condition, and two strings. If the condition is true, the result of the operator will be the first string. If not, the second one. The syntax is: condition > condition ? string : string",
+    "exampleExplanation": "In this example, we're checking if the selected book has more or less than 1000 pages. If more, the ternary operator returns string 'over a thousand'. If less, it returns 'less than 1000'. Lastly, we put the ternary operator inside a template literal.",
+    "exampleCode": "/assets/images/ternaries-code.png",
+    "docs": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_operator"
+  },
+  {
+    "id": "7",
+    "title": "Arrow Function",
+    "definition": "Arrow functions are a new feature introduced in ES6, which allows us to write quick one-line functions. It's comprised of an argument, an arrow, and what we want to return.",
+    "exampleExplanation": "In this example, we're using an arrow function to split the publication date into an array. Then, we return only the 1st object from the array, which is the year of the publication. Lastly, we put it in a template literal.",
+    "exampleCode": "/assets/images/arrowfunction-code.png",
+    "docs": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_operator"
+  },
+  {
+    "id": "8",
+    "title": "Short-Circuiting",
+    "definition": "Some logical operators, such as the end ( && ) and the or ( || ) operator, have a feature called short-circuiting. It means that in certain conditions the operator will immediately return the first value, without even looking at the second value. The 'end &&' operator instantly returns the first value if the condition is false.",
+    "exampleExplanation": "In this example, we create two short-cicruits using end-operators, and two more using or-operators. The first operator has a 'falsy' first value (falsy values: 0, null, '', undefined), so it returns the first value. The second operator has a 'truey' first value, so it returns the second value. The or-operators work exactly the opposite way.",
+    "exampleCode": "/assets/images/shortcircuiting-code.png",
+    "docs": "https://www.freecodecamp.org/news/short-circuiting-in-javascript/"
+  },
+  {
+    "id": "9",
+    "title": "Optional Chaining",
+    "definition": "The optional chaining ( ?. ) operator accesses an object's property or calls a function. If the object accessed or function called using this operator is undefined or null , the expression short circuits and evaluates to undefined instead of throwing an error.",
+    "exampleExplanation": "In this example, we count the total number of reviews of the selected book. To do this, we access the reviewsCount for each review platform. However, book no.2 only has reviews from one platform. The optional chaining operator allows us to count the total reviews despite that. Try removing it, and you will get an error for undefined property.",
+    "exampleCode": "/assets/images/optionalchaining-code.png",
+    "docs": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Optional_chaining"
+  },
+  {
+    "id": "10",
+    "title": "Map method",
+    "definition": "Map is a type of functional array method. It returns a new array based on the original one, without mutating it. The map method loops over an array and returns a new array of the same lenght with some operation applied to each of the elements of the original array. This method takes a callback function and applies it to every element of the array.",
+    "exampleExplanation": "In this example, create a new array based on the original one. In example 1, each element of the original array is multiplied by two and put in a new array. In example 2, we make a new array with only a specific value from the original array.",
+    "exampleCode": "/assets/images/mapmethod-code.png",
+    "docs": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map"
+  },
+  {
+    "id": "11",
+    "title": "Filter method",
+    "definition": "The filter method allows us to filter out some elements of an array based on a condition. We pass in a condition which will either be true of false, and will apply to every element of the array. If the result of that condition is true, then the current element will go into a new, filtered array. If it's false, then it will get 'filtered out', hence the name.",
+    "exampleExplanation": "In this example, we filter out the books with more pages than the set limit. Let's look at the filter method. First, we specify what array we want to filter [books]. Next, inside the parentheses, we pass in a condition, which says 'if this element book.pages is more than the page limit, it goes into the new array.",
+    "exampleCode": "/assets/images/filtermethod-code.png",
+    "docs": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter"
+  },
+  {
+    "id": "12",
+    "title": "Reduce method",
+    "definition": "The reduce method is the most powerful out of all. It's goal is to reduce the whole array to one value. First, we pass in a function, and then a starter value.The passed-in function will gets called with the current element and with the current value of the acumulator.",
+    "exampleExplanation": "In this example, we filter out the books with more pages than the set limit. Let's look at the filter method. First, we specify what array we want to filter [books]. Next, inside the parentheses, we pass in a condition, which says 'if this element book.pages is more than the page limit, it goes into the new array.",
+    "exampleCode": "/assets/images/filtermethod-code.png",
+    "docs": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reduce"
+  },
+  {
+    "id": "13",
+    "title": "Sort method",
+    "definition": "Array sort method is an operation which allows us to sort the elements of an array. It takes a function with two arguments ( a,b ) where 'a' is the current value and 'b' is the next value.",
+    "exampleExplanation": "In this example, we sort the books from newest to oldest by the year. First, we write a function that splits the publication date (yyyy-mm-dd) into an array [yyyy, mm, dd], and takes out the first element [yyyy]. Then, we create a 'copy' of the original array by mapping it and using the spread operator ( ...book ). Then, we add a new element [year] to the new array, and call back the arrow function inside, so that it returns the year for each book. Next, we sort the new array by subtracting the smaller value from the bigger value. This calculation gives us a positive number, so the array will be sorted in a descending manner. Lastly, we splice the sorted array. This way it won't mutate the un-sorted one.",
+    "exampleCode": "/assets/images/sortmethod-code.png",
+    "docs": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort"
+  },
+  {
+    "id": "14",
+    "title": "Immutable Arrays",
+    "definition": "During development you'll always find yourself having to change the array in some way. Here's how to do that without mutating the original array:",
+    "exampleExplanation": "In this example, we perform three operations to an array without mutating it. 1) we add a new object to the array by using the spread operator. 2) we delete an object from the array by using the filter method and including all the books with id different from three. 3) update an object from the original array by mapping it and using a spread operator to populate it with data from original array.",
+    "exampleCode": "/assets/images/immutablearrays-code.png",
+    "docs": "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+  },
+  {
+    "id": "15",
+    "title": "Async JS: Promises",
+    "definition": "Fetching data from an external API takes time. A promise the process of fetching data. It has three states: pending, rejected and fulfilled. JavaScript doesn't wait for the promise to fulfill. To fix that, we can use the .then() operator.",
+    "exampleExplanation": "In this example, we fetch data from an external API. The first .then() operator tells JavaScript to come back once the data is loaded and convert it to JSON. The second .then() operator tells JavaScript to actually do something with the data.",
+    "exampleCode": "/assets/images/promises-code.png",
+    "docs": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise"
+  },
+  {
+    "id": "16",
+    "title": "Async/Await",
+    "definition": "The async/await function doesn't let JavaScript move on to the next script before fulfilling the fetch promise.",
+    "exampleExplanation": "In this example, we fetch the same data, but in a much simpler and cleaner way. Instead of the .then() operator we put the fetch function inside another function. Then we use async and await to stop the javascript from moving on before the promise is fulfilled.",
+    "exampleCode": "/assets/images/promises-code.png",
+    "docs": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function"
+  }
+]

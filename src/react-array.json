@@ -1,0 +1,34 @@
+[
+  {
+    "id": "1",
+    "title": "useState",
+    "definition": "One of the basics of React development. When we want something to change ex. change the text of a button upon click, we use states",
+    "exampleExplanation": "In this example, we're import useState from react and using it to toggle between a button's classes, thus changing it's styling",
+    "exampleCode": "/assets/images/usestate-code.png",
+    "docs": "https://react.dev/reference/react/useState"
+  },
+  {
+    "id": "2",
+    "title": "useEffect",
+    "definition": "useEffect is another primary tool in the React toolbox. It's comprised of two arguments. The first argument takes a function that you want to execute on page load. The second argument, called the 'Dependency Array'...",
+    "exampleExplanation": "In this example we use a function to fetch an external api for pieces of advice, and destructure them. Then we put the function the first argument of useEffect. This way the first piece of advice displays on page load. We block the advice from displaying automatically using the empty array []",
+    "exampleCode": "/assets/images/useeffect-code.png",
+    "docs": "https://react.dev/reference/react/useEffect"
+  },
+  {
+    "id": "3",
+    "title": "Props",
+    "definition": "When passing functions or variables from one component in another component, we have to use props. It's a way to re-define a value from one component so that the other component can understand it",
+    "exampleExplanation": "In this example we put the counter inside a different react component. To retain counting function, we use a prop called 'count'. To use the prop, pass it in the new component's export and import.",
+    "exampleCode": "/assets/images/props-code.png",
+    "docs": "https://react.dev/learn/passing-props-to-a-component"
+  },
+  {
+    "id": "4",
+    "title": "Components",
+    "definition": "Components are singular pieces of user interface. Every component has it's own data, logic and design, and they're entirely reusable.",
+    "exampleExplanation": "In this example, we created a component with a heading and some text. The component is created in a separate .js file. First, we type in 'rfce' to set the environment. Then, we create dom elements with jsx. Lastly, we export the component.",
+    "exampleCode": "/assets/images/components-code.png",
+    "docs": "https://react.dev/reference/react/Component"
+  }
+]

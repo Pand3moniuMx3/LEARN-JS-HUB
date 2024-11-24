@@ -1,0 +1,41 @@
+.hero-section {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: var(--section-padding);
+    background-image: 
+        linear-gradient(
+            90deg,
+            transparent calc(100% - var(--grid-line-width)),
+            var(--clr-grid) var(--grid-line-width)
+        ), linear-gradient(
+            0deg,
+            transparent calc(100% - var(--grid-line-width)),
+            var(--clr-grid) var(--grid-line-width)
+        );
+    background-size: calc(var(--content-width) / var(--grid-cell-size)) calc(var(--content-width) / var(--grid-cell-size));
+    background-position: center;
+    position: relative;
+    z-index: 0;
+} .hero-section::before {
+    content: '';
+    position: absolute;
+    inset: 0 0 0 0;
+    z-index: 0;
+    background-image: radial-gradient(
+        transparent 0%,
+        var(--clr-black) 85%
+    );
+} .hero-section > * {
+    z-index: 1;
+    text-align: center;
+}
+.hero {
+    width: min(var(--content-width), 90vw);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: var(--global-gap);
+}
